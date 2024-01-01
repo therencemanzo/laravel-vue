@@ -9,14 +9,17 @@ init:
 	@make db-seed
 	@make npm-install
 	@make npm-run
+
+
 cp-env:
 	cp .env.example .env
-sail-up:
-	./vendor/bin/sail up
-key:
-	./vendor/bin/sail artisan key:generate 
 composer-update:
 	composer update
+sail-up:
+	./vendor/bin/sail up
+
+key:
+	./vendor/bin/sail artisan key:generate 
 db-migrate:
 	./vendor/bin/sail artisan migrate:fresh
 php-serve:
