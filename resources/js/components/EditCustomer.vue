@@ -73,7 +73,7 @@ const loadCustomer = async () => {
 const handleSubmit = async () => {
 
     try {
-        let response = await axios.post('customers', {
+        let response = await axios.put(`customers/${props.id}`, {
             'name': customer.value.name,
             'email': customer.value.email,
             'phone': customer.value.phone,
