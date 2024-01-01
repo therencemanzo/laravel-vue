@@ -1,11 +1,12 @@
 setup:
 	@make cp-env
+	@make composer-update
 	@make sail-up
+
 init:
 	@make key
-	@make composer-update
 	@make db-migrate
-	@make php-serve
+	@make db-seed
 	@make npm-install
 	@make npm-run
 cp-env:
@@ -15,7 +16,7 @@ sail-up:
 key:
 	./vendor/bin/sail artisan key:generate 
 composer-update:
-	./vendor/bin/sail composer update
+	composer update
 db-migrate:
 	./vendor/bin/sail artisan migrate:fresh
 php-serve:
