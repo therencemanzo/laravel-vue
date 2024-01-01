@@ -20,11 +20,11 @@ class CustomerFactory extends Factory
     {
         return [
             'name' => fake()->name(),
-            'user_id' => 2,
+            'user_id' => User::factory(),
             'email' => fake()->safeEmail(),
             'address' => fake()->address(),
             'phone' => fake()->phoneNumber(),
-            'visibility' => 1
+            'visibility' => 0
         ];
     }
 }

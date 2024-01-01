@@ -41,7 +41,7 @@
 
 <script setup>
 import axios from 'axios';
-import { ref, onMounted, defineProps } from 'vue';
+import { ref, onMounted } from 'vue';
 import router from '@/router';
 import { store } from '@/store';
 
